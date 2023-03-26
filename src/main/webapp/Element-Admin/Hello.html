@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+
+<body>
+
+  <div class="layui-container">
+    <div class="layui-bg-gray" style="padding: 30px;">
+      <div class="layui-row layui-col-space15">
+
+        <div class="layui-col-md6">
+          <div class="layui-panel">
+            <div style="padding: 50px 30px;">发布文章</div>
+          </div>   
+        </div>
+        <div class="layui-col-md6">
+          <div class="layui-panel">
+            <div style="padding: 50px 30px;">上架产品</div>
+          </div>   
+        </div>
+        <div class="layui-col-md6">
+          <div class="layui-panel">
+            <div style="padding: 50px 30px;">审核用户</div>
+          </div>   
+        </div>
+        <div class="layui-col-md6">
+          <div class="layui-panel">
+            <div style="padding: 50px 30px;">站长博客</div>
+          </div>   
+        </div>
+        
+      </div> 
+    </div>
+
+    <blockquote class="layui-elem-quote" style="margin-top: 30px;">
+      <div class="layui-text">
+        <ul>
+          <li>本框架仅作为学习测验使用，未经站长授权，禁止作为任何商业用途。</li>
+          <li>站长博客：<a href="https://foxihaohao.com/">智慧分享屋</a>，加入 WEB技术交流群（群号：1047200507）</li>
+          <li><div class="&#xe68d;" id="RQ"></div></li>
+          
+        </ul>
+      </div>
+    </blockquote>
+  </div>
+
+  <!-- body 末尾处引入 layui -->
+  <script src="layui/layui.js"></script>
+  <script>
+    layui.use(function () {
+      var layer = layui.layer
+        , form = layui.form
+        , laypage = layui.laypage
+        , element = layui.element
+        , laydate = layui.laydate
+        , util = layui.util;
+
+      //欢迎信息
+      layer.msg('Hello,我的朋友！');
+
+
+      //日期
+      laydate.render({
+        elem: '#RQ'
+        , value: new Date()
+        , isInitValue: true
+      });
+
+    });
+  </script>
+</body>
+
+</html>

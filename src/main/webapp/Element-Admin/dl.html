@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <!-- 引入 layui.css -->
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="layui-bg-gray" style="padding: 30px;">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md6">
+                <div class="layui-panel">
+                    <div style="padding: 50px 0px;">
+                        <!-- 表单 -->
+                        <form class="layui-form" action="/Maven_Web0325_Web/demo1" method="get" id="form">
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">姓名：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="name" lay-verify="required" lay-reqtext="账号名不能为空！"
+                                        placeholder="请输入账号" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">密码：</label>
+                                <div class="layui-input-inline">
+                                  <input type="password" name="password" lay-verify="required" lay-reqtext="请输入密码！" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-form-mid layui-word-aux"></div>
+                              </div>
+
+                            <div class="layui-form-item">
+                                <div class="layui-input-block">
+                                    <button type="submit" class="layui-btn layui-btn-normal" lay-filter="">登录</button>
+                                    <button type="reset" class="layui-btn layui-btn-primary">注册</button>
+                                    <a href="register.html">没有账号？点击注册</a>
+                                </div>
+                            </div>
+                        </form>
+                        <!--  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./layui/layui.js"></script>
+    <script>
+        layui.use(['layer', 'form'], function () {
+            var layer = layui.layer;
+            var form = layui.form;
+
+            layer.msg('欢迎登录ZQ管理系统！');
+        });
+    </script>
+</body>
+
+<!-- 引入 layui.js -->
+<!-- <script src="//unpkg.com/layui@2.7.6/dist/layui.js" /> -->
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- 通知 -->
+    <template>
+      <el-button
+        plain
+        @click="open1">
+        可自动关闭
+      </el-button>
+      <el-button
+        plain
+        @click="open2">
+        不会自动关闭
+        </el-button>
+    </template>
+    <!-- 搜索 -->
+<el-button type="primary" icon="el-icon-search">搜索</el-button>
+    <el-button @click="visible = true">公告</el-button>
+    <el-dialog :visible.sync="visible" title="欢迎来到ZQ的个人博客~">
+      <p>您可以在这里看到我做过的小项目！</p>
+      <p>接下来一起来欣赏吧~</p>
+      <a href="https://foxihaohao.blog.csdn.net">WWW.FOXIHAOHAO.COM</a>
+    </el-dialog>
+  </div>
+
+  
+  <script>
+    export default {
+      methods: {
+        open1() {
+          const h = this.$createElement;
+  
+          this.$notify({
+            title: '标题名称',
+            message: h('i', { style: 'color: teal'}, '这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案')
+          });
+        },
+  
+        open2() {
+          this.$notify({
+            title: '提示',
+            message: '这是一条不会自动关闭的消息',
+            duration: 0
+          });
+        }
+      }
+    }
+  </script>
+  <!--  -->
+</body>
+<!-- 引入组件库 -->
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+      return { visible: false }
+    }
+  })
+</script>
+
+</html>
